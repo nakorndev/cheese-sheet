@@ -1,8 +1,8 @@
 {
   "name": "cheese-sheet",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Template for cheat sheet builder",
-  "main": "src/webpack.config.js",
+  "bin": "src/main.js",
   "scripts": {
     "build": "node src/main.js --dist=dist --cheatsheet=data/cheatsheet.md --info=data/info.json --logo=data/logo.png"
   },
