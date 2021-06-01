@@ -1,0 +1,18 @@
+{
+  "mainUrl": "https://nakorndev.github.io/cheatsheet-template/",
+  "startUrl": "/cheatsheet-template/",
+  "title": "My Cheat Sheet",
+  "description": "Awesome cheat for you!",
+  "keywords": "cheatsheet, awesome, coding",
+  "themeLight": true,
+  "themeColor": "#eeeeee",
+  "lang": "en",
+  "author": {
+    "name": "John Doe",
+    "link": "http://example.com/"
+  },
+  "menus": [
+    { "label": "Link 1", "href": "http://example.com" },
+    { "label": "Link 2", "href": "http://example.com" }
+  ]
+}

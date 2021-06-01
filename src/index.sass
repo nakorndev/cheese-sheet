@@ -1,0 +1,52 @@
+@import "~bulma/bulma"
+@import "~highlight.js/scss/color-brewer"
+
+body
+  display: flex
+  flex-direction: column
+  min-height: 100vh
+
+main
+  flex-grow: 1
+
+.grid
+  margin: auto
+  .grid-item
+    width: 350px
+
+.card
+  .card-content
+    padding: 0.75rem
+    font-size: 0.9rem
+
+  .card-header
+    box-shadow: none
+    border-bottom: 1px solid #eee
+
+.content
+  pre, blockquote
+    padding: 0.75em 1em
+  blockquote code
+    background-color: white
+  ul
+    margin-top: 0
+
+.hljs
+  background-color: #f5f5f5
+
+@media print
+  footer, .hero-foot
+    display: none
+
+  header
+    height: 100px
+
+  .section
+    width: 500px
+
+  .card
+    box-shadow: none
+    border: 1px solid #c3c3c3
+
+  .content pre
+    padding: 0

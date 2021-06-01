@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="<%= info.lang %>">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="android-chrome-512x512.png">
+  <title><%= info.title %> | <%= info.description %></title>
+</head>
+<body>
+  <header class="hero <%= info.themeLight ? 'is-light' : 'is-dark' %>" style="background-color: <%= info.themeColor %>;">
+    <div class="hero-body">
+      <div class="has-text-centered">
+        <h1 class="title"><%= doc.title %></h1>
+        <h2 class="subtitle"><%= doc.subtitle %></h2>
+      </div>
+    </div>
+    <div class="hero-foot">
+      <div class="tabs is-boxed is-centered">
+        <div class="container">
+          <ul>
+            <% for (const menu of info.menus) { %>
+              <li><a href="<%= menu.href %>"><%= menu.label %></a></li>
+            <% } %>
+            <li><a onclick="window.print()">Print</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container is-fluid">
+      <div class="grid">
+        <% for (const cheat of doc.cheats) { %>
+          <div class="grid-item">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-header-title">
+                  <%= cheat.title %>
+                </h3>
+              </div>
+              <div class="card-content">
+                <div class="content">
+                  <%= cheat.body %>
+                </div>
+              </div>
+            </div>
+          </div>
+        <% } %>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="has-text-centered content">
+      <p>Powered by <a href="https://github.com/nakorndev/cheatsheet-template">nakorndev/cheatsheet-template</a>.</p>
+      <p>Updated at <b><%= updatedAt.toLocaleString('en-US') %></b>. Content by <a href="<%= info.author.link %>"><%= info.author.name %></a>.</p>
+    </div>
+  </footer>
+</body>
+</html>
